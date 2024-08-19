@@ -9,7 +9,7 @@ const Navbar = ({ onShowAddCardButton }) => {
         <>
             <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#000000' }}>
                 <div className="container-fluid">
-                    <a className="navbar-brand text-white" href="http://futureskills.ai/">Abstract | Help Center</a>
+                    <a className="navbar-brand text-white" href="/">Abstract | Help Center</a>
                     <button 
                         className="navbar-toggler" 
                         type="button" 
