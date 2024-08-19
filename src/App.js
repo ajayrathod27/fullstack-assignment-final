@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import CardSection from './frontend/componets/CardSection';
+import Footer from './frontend/componets/Footer';
 
 function App() {
+  
+  const [searchedCard, setSearchedCard] = useState(null);
+
+    // eslint-disable-next-line
+    const handleSearchResult = (card) => {
+      setSearchedCard(card);
+    };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardSection cards={searchedCard ? [searchedCard] : []} />
+      <Footer />
     </div>
   );
 }
